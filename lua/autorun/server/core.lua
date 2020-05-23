@@ -16,6 +16,7 @@ local l_tCe = timer.Create
 local l_tsg = tostring
 local l_sgb = string.gsub
 local l_ie = include
+local l_tRe = timer.Remove
 l_ie("bpl_config.lua")
 
 -- [BPL] | Main Hook. Runs on only FIRST spawn.
@@ -41,9 +42,10 @@ l_hAd("PlayerInitialSpawn", "BPL_SoftDetectionSystem", function(ply)
       end)
   end
 end)
+
 -- Removes timer incase player disconnects before code is executed.
 l_hAd("PlayerDisconnected","BPL_Punish_Custom_Remove", function(ply)
   local pl_sid64 = ply:SteamID64()
-  l_tR("BPL_Punish_" .. pl_sid64 .. "_Custom_Timer")
+  l_tRe("BPL_Punish_" .. pl_sid64 .. "_Custom_Timer")
 end)
 l_pnt("[BPL] | " .. "Core has loaded. | " .. "Version Number: " .. BPL.VersionNumber)
