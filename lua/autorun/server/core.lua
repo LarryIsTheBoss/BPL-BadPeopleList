@@ -1,10 +1,9 @@
 --[[
 Welcome to BPL - Bad People List
-
-About: This is used to deter people from playing on your server, either by crashing them, or making them think their steam ticket has been cancelled.
-This should easily deter most people thrown on the list.
-
-Addon Creator: QuirkyLarry - STEAM_0:0:80555260
+Addon Creator: QuirkyLarry
+SteamID: STEAM_0:0:80555260
+SteamID64: 76561198121376248
+SteamID Profile Link: http://steamcommunity.com/profiles/76561198121376248
 ]]
 
 -- Localized function(s).

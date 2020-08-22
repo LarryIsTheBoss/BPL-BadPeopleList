@@ -1,10 +1,18 @@
 --[[
 Welcome to BPL - Bad People List
 
+How is this useful?: This addon can be used to deter players that are toxic, unwanted, or potential problematic.
+
+What should this not be used for?: To deter cheaters with paid hacks. Any good hacks will have anti-lua run on client which prevents this addon from working 100% properly. 
+They will still be kicked, but not crashed. This is not an alt-account system. It can be used in that way, but is not meant to work in that way.
+
 About: This is used to deter people from playing on your server, either by crashing them, or making them think their steam ticket has been cancelled.
 This should easily deter most people thrown on the list.
 
-Addon Creator: QuirkyLarry - STEAM_0:0:80555260
+Addon Creator: QuirkyLarry
+SteamID: STEAM_0:0:80555260
+SteamID64: 76561198121376248
+SteamID Profile Link: http://steamcommunity.com/profiles/76561198121376248
 ]]
 
 BPL = {}
