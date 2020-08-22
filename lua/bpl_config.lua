@@ -1,7 +1,7 @@
 --[[
 Welcome to BPL - Bad People List
 
-How is this useful?: This addon can be used to deter players that are toxic, unwanted, or potential problematic.
+How is this useful?: This addon can be used to deter players that are toxic, unwanted, or potentially problematic.
 
 What should this not be used for?: To deter cheaters with paid hacks. Any good hacks will have anti-lua run on client which prevents this addon from working 100% properly. 
 They will still be kicked, but not crashed. This is not an alt-account system. It can be used in that way, but is not meant to work in that way.
@@ -40,4 +40,4 @@ BPL.SoftPunishIP = false
 BPL.MinTimeBeforePunish = 60
 BPL.MaxTimeBeforePunish = 600
 
-BPL.VersionNumber = 1.2
+BPL.VersionNumber = 1.3
