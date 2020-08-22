@@ -32,4 +32,4 @@ BPL.SoftPunishIP = false
 BPL.MinTimeBeforePunish = 60
 BPL.MaxTimeBeforePunish = 600
 
-BPL.VersionNumber = 1.1
+BPL.VersionNumber = 1.2
