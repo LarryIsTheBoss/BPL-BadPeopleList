@@ -27,6 +27,7 @@ l_hAd("PlayerInitialSpawn", "BPL_SoftDetectionSystem", function(ply)
   local l_SteamID64 = ply:SteamID64()
   local l_IPAddress = ply:IPAddress()
   local l_PlayerName = ply:Nick()
+  local l_GModLicenseOwner = ply:OwnerSteamID64()
   -- Splits the IP Address and the port number they are connected on.
   l_IPAddressSimple = l_sEe(":", l_IPAddress)
   l_mTe(TimeUntilDisconnect, 0)
@@ -42,6 +43,13 @@ l_hAd("PlayerInitialSpawn", "BPL_SoftDetectionSystem", function(ply)
           if not SoftPunishIP then ply:SendLua( 'while true do end' ); ply:Kick("Steam auth ticket has been cancelled") else ply:Kick("Steam auth ticket has been cancelled") end
           l_pnt("[BPL] | " .. l_PlayerName .. " - " .. l_SteamID64 .. " attempted to play but was caught. - Their current IP: " .. l_IPAddressSimple[1] .. " - Detection Method: [IPAddress] | " .. "SteamID Blacklisted: " .. l_tsg(l_tHV(BPL.BPL_SteamID64M, l_SteamID64) or l_tHV(BPL.BPL_SteamID64CB, l_SteamID64)))
       end)
+  end
+  if BPL.PunishFamilyShare && not BPL.FamilyShareBan then
+    if l_tHV(BPL.FamilyShareIgnore, l_SteamID64) then return end
+    if l_SteamID64 == l_GModLicenseOwner then return end
+    ply:Kick("Family Shared accounts are not allowed.")
+  else
+    ply:Ban(BPL.FamilyShareBanLength,true)
   end
 end)
 

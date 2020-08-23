@@ -39,5 +39,18 @@ BPL.SoftPunishIP = false
 -- [BPL] | Min and max time befoire someone is punished. It is randomized between these two numbers.
 BPL.MinTimeBeforePunish = 60
 BPL.MaxTimeBeforePunish = 600
+-- [BPL] | Family Share - These are the punishments for family share accounts.
+BPL.PunishFamilyShare = false
+-- Setting this to true will ban the player instead of kicking them.
+-- Having PunishFamilyShare to true and FamilyShareBan to false will kick family shared accounts.
+BPL.FamilyShareBan = false
+-- How long to ban the family shared account.
+-- If you would like the main account to be banned too please contact me to implement it.
+BPL.FamilyShareBanLength = 0
+-- Whitelist of SteamID 64s for BPl Family Share to ignore.
+-- Incase you would like to whitelist people.
+BPL.FamilyShareIgnore = {
+-- EX: "231654874321",
+}
 
-BPL.VersionNumber = 1.3
+BPL.VersionNumber = 1.4
