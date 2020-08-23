@@ -50,7 +50,7 @@ BPL.FamilyShareBanLength = 0
 -- Whitelist of SteamID 64s for BPl Family Share to ignore.
 -- Incase you would like to whitelist people.
 BPL.FamilyShareIgnore = {
--- EX: "231654874321",
+-- EX: "STEAMID64","76561198121376248",
 }
 
 BPL.VersionNumber = 1.4
