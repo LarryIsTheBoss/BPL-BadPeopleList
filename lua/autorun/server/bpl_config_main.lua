@@ -12,11 +12,8 @@ This should easily deter most people thrown on the list.
 Commands: Use "bpl_blacklist STEAMID64" to add someone to the blacklist live. 
 This will kick them with the "Steam auth ticket has been cancelled" message and punish them on rejoin.
 
-Addon Creator: QuirkyLarry
-SteamID: STEAM_0:0:80555260
-SteamID64: 76561198121376248
-SteamID Profile Link: http://steamcommunity.com/profiles/76561198121376248
-BPL Github: https://github.com/LarryIsTheBoss/BPL-BadPeopleList
+-- Addon Creator: QuirkyLarry - STEAM_0:0:80555260 - 76561198121376248 - http://steamcommunity.com/profiles/76561198121376248
+-- BPL Github: https://github.com/LarryIsTheBoss/BPL-BadPeopleList
 ]]
 
 BPL = BPL or {}
@@ -29,8 +26,9 @@ BPL.TimerName = "UpdateInfo"
 BPL.EnablePunishment = true
 -- [BPL] | This enables BPL to punish a player caught by BPL by using their IP. [Enable: true; Disable: false]
 BPL.EnableIPPunishment = true
--- [BPL] | This enables Anti-Family sharing. [Enable: true; Disable: false]
-BPL.AntiFamilyShare = true
+-- [BPL] | This enables Simple Anti-Family sharing. [Enable: true; Disable: false]
+-- Info | Uses a simple method to determine if Garry's Mod is being shared with the account.
+BPL.SimpleAntiFamilyShare = true
 -- [BPL] | Administration system. This is the administration system you are currently using. 
 -- For SAM put "SAM"
 -- For ULX put "ULX"
@@ -40,7 +38,7 @@ BPL.AdminSystem = "SOURCE"
 -- List of people for for BPL to punish.
 -- I would use this for SteamID64(s) you never plan to remove.
 BPL.Config.BPL_SteamID64 = {
--- EX: "STEAMID64","76561198121376248",
+-- EX: "76561198121376248",
 }
 -- [BPL] | Must be in quotes and separated by commas.
 -- List of player's IPs for BPL to punish.
@@ -49,12 +47,20 @@ BPL.Config.BPL_IPs = {
 -- EX: "0.0.0.0",
 }
 -- [BPL] | Current version of BPL.
-BPL.VersionNumber = 1.6
+BPL.VersionNumber = "1.6.9"
 
 --[[
-
 Change Notes.
-
+v1.6.9
+  - "BPL.AntiFamilyShare" was renamed to "BPL.SimpleAntiFamilyShare" in preparation for new alt-account methods.
+  - Re-wrote the ban function to remove duplicate code. More efficient now.
+  - Added "BPL.Punish.CustomLUAKick". Allows you to disable kicking a player after running LUA on them.
+  - Changed "BPL.Config.BPL_SteamID64" config example to be less confusing.
+  - Changed "disconnected hook" to be more efficient.
+  - Console print messages for detections are now more legible.
+  - Main hook now uses more efficient ban function.
+  - Updated a few code comments.
+  - Added dates to change notes.
 V1.6
   - Change notes were introduced.
   - Ban support for SAM, ULX, and Source was added.

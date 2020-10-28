@@ -1,11 +1,5 @@
---[[
-Welcome to BPL - Bad People List
-Addon Creator: QuirkyLarry
-SteamID: STEAM_0:0:80555260
-SteamID64: 76561198121376248
-SteamID Profile Link: http://steamcommunity.com/profiles/76561198121376248
-BPL Github: https://github.com/LarryIsTheBoss/BPL-BadPeopleList
-]]
+-- Addon Creator: QuirkyLarry - STEAM_0:0:80555260 - 76561198121376248 - http://steamcommunity.com/profiles/76561198121376248
+-- BPL Github: https://github.com/LarryIsTheBoss/BPL-BadPeopleList
 BPL = BPL or {}
 BPL.FamilyShare = BPL.FamilyShare or {}
 -- [BPL] | Setting this to true will ban the player instead of kicking them.
