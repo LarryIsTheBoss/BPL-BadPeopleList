@@ -5,6 +5,10 @@ BPL.FamilyShare = BPL.FamilyShare or {}
 -- [BPL] | Setting this to true will ban the player instead of kicking them.
 -- Having PunishFamilyShare to true and FamilyShareBan to false will kick family shared accounts.
 BPL.FamilyShare.Ban = false
+-- [BPL] | Setting this to true will crash the player.
+BPL.FamilyShare.Crash = false
+-- [BPL] | Setting this to true will ban the Garry's Mod license owner instead of kicking them.
+BPL.FamilyShare.BanOwner = false
 -- [BPL] | How long to ban the family shared account.
 -- If you would like the main account to be banned too please contact me to implement it.
 BPL.FamilyShare.BanLength = 0

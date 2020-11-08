@@ -22,5 +22,8 @@ BPL.Punish.CustomLUAKick = false
 -- EX: "while true do end" -- This will cause Garry's Mod to freeze and eventually crash the client.
 -- EX: "LocalPlayer():ConCommand('connect 0.0.0.0:27015')" -- This will redirect the player to the IP address provided.
 -- [BPL] | Min and max time before someone is punished. It is randomized between these two numbers.
-BPL.Punish.MinTimeBeforePunish = 60
-BPL.Punish.MaxTimeBeforePunish = 600
+-- Min is the minimum amount of seconds before the client should be punished.
+-- Max is the maximum amount of seconds to wait before punishing a client.
+-- The value is randomized between these two numbers to prevent someone from assuming they are being manipulated.
+BPL.Punish.MinTimeBeforePunish = 60 -- One Minute
+BPL.Punish.MaxTimeBeforePunish = 600 -- Ten Minutes

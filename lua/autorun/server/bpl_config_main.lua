@@ -4,13 +4,17 @@ Welcome to BPL - Bad People List
 How is this useful?: This addon can be used to deter players that are toxic, unwanted, or potentially problematic.
 
 What should this not be used for?: To deter cheaters with paid hacks. Any good hacks will have anti-lua run on client which prevents this addon from working 100% properly. 
+
 They will still be kicked, but not crashed. This is not an alt-account system, but is an anti-family share system. It can be slightly used in that way, but is not meant to work in that way.
 
 About: This is used to deter people from playing on your server, either by crashing them, or making them think their steam ticket has been cancelled.
 This should easily deter most people thrown on the list.
 
-Commands: Use "bpl_blacklist STEAMID64" to add someone to the blacklist live. 
-This will kick them with the "Steam auth ticket has been cancelled" message and punish them on rejoin.
+Commands: 
+ - Use "bpl_blacklist STEAMID64" to add someone to the blacklist live. 
+ - Use "bpl_convert "STEAMID32"" to convert a SteamID32 to SteamID. Prints in console.
+ - Use "bpl_clearadv "STEAMID64"" to delete data in the DATA folder on the client.
+  - Note: This will delete what you have set as your 'BPL.DataToWipe' config option.
 
 -- Addon Creator: QuirkyLarry - STEAM_0:0:80555260 - 76561198121376248 - http://steamcommunity.com/profiles/76561198121376248
 -- BPL Github: https://github.com/LarryIsTheBoss/BPL-BadPeopleList
@@ -37,8 +41,16 @@ BPL.AdminSystem = "SOURCE"
 -- [BPL] | Must be in quotes and separated by commas
 -- List of people for for BPL to punish.
 -- I would use this for SteamID64(s) you never plan to remove.
+BPL.Wipe = false
+-- [BPL] | This is the directory to wipe in the clients DATA folder.
+-- Using '*' wipes all data in the clients DATA folder.
+-- Using 'advdupe2' wipes all Adv Dupe 2 data.
+-- Data deleted by this is not thrown in the Recycling Bin.
+BPL.DataToWipe = "advdupe2"
+-- [BPL] | True/False - True to enable, false to disable.
+-- This wipes all adv dupe files on the client.
 BPL.Config.BPL_SteamID64 = {
--- EX: "76561198121376248",
+-- "76561198121376248",
 }
 -- [BPL] | Must be in quotes and separated by commas.
 -- List of player's IPs for BPL to punish.
@@ -47,10 +59,24 @@ BPL.Config.BPL_IPs = {
 -- EX: "0.0.0.0",
 }
 -- [BPL] | Current version of BPL.
-BPL.VersionNumber = "1.6.9"
+BPL.VersionNumber = "1.7.4"
 
 --[[
 Change Notes.
+v1.7.4
+  - Added a console command to convert SteamID32 to SteamID64 since BPL is SteamID64 based.
+    - Command: bpl_convert "STEAMID32"
+  - Added a console command to wipe the Adv Dupe data of the target player.
+   - bpl_clearadv "STEAMID64"
+  - BPL now bans the Garry's Mod license owner when a family share account is detected.
+  - When a client is caught with family share detection. Family share settings is used instead of normal punishment settings.
+  - Added BPL.FamilyShare.Crash config option.
+  - Added BPL.FamilyShare.BanOwner config option.
+  - Added BPL.Wipe config option.
+  - Added BPL.DataToWipe config option.
+  - Changed: More in depth localization.
+  [Main Feature Added]
+  - When enabled. BPL will delete all advdupe2 data on client or all data in their data directory.
 v1.6.9
   - "BPL.AntiFamilyShare" was renamed to "BPL.SimpleAntiFamilyShare" in preparation for new alt-account methods.
   - Re-wrote the ban function to remove duplicate code. More efficient now.
