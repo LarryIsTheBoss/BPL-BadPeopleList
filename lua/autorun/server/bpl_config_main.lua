@@ -38,17 +38,17 @@ BPL.SimpleAntiFamilyShare = true
 -- For ULX put "ULX"
 -- To use Garry's Mod ban system use "SOURCE"
 BPL.AdminSystem = "SOURCE"
--- [BPL] | Must be in quotes and separated by commas
--- List of people for for BPL to punish.
--- I would use this for SteamID64(s) you never plan to remove.
+-- [BPL] | True/False - True to enable, false to disable.
+-- This wipes all adv dupe files on the client.
 BPL.Wipe = false
 -- [BPL] | This is the directory to wipe in the clients DATA folder.
 -- Using '*' wipes all data in the clients DATA folder.
 -- Using 'advdupe2' wipes all Adv Dupe 2 data.
 -- Data deleted by this is not thrown in the Recycling Bin.
 BPL.DataToWipe = "advdupe2"
--- [BPL] | True/False - True to enable, false to disable.
--- This wipes all adv dupe files on the client.
+-- [BPL] | Must be in quotes and separated by commas
+-- List of people for for BPL to punish.
+-- I would use this for SteamID64(s) you never plan to remove.
 BPL.Config.BPL_SteamID64 = {
 -- "76561198121376248",
 }
